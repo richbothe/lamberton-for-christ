@@ -1,0 +1,32 @@
+{
+  "name": "lamberton-for-christ.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richbothe/lamberton-for-christ.git"
+  },
+  "author": "Rich Bothe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richbothe/lamberton-for-christ/issues"
+  },
+  "homepage": "https://github.com/richbothe/lamberton-for-christ#readme",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.6.3",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-minify": "0.0.14",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "jquery": "^3.1.1",
+    "jshint": "^2.9.3"
+  }
+}

@@ -6,15 +6,15 @@ var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 
 // Delete the dist directory
-//gulp.task('clean', function() {
-//	return gulp.src('dist')
-//		.pipe(clean());
-//});
+gulp.task('clean', function() {
+	return gulp.src('dist')
+		.pipe(clean());
+});
 
 // lint task
 gulp.task('lint', function() {
@@ -26,11 +26,13 @@ gulp.task('lint', function() {
 // sass task
 gulp.task('sass', function() {
 	return gulp.src('src/scss/**/*.scss')
-    	.pipe(sass())              // Sass-ify
-    	.pipe(sourcemaps.init())   // Initializes sourcemaps
-    	.pipe(sourcemaps.write())  // Writes sourcemaps into the CSS file
-    	.pipe(gulp.dest('dist/css'));   // Where the assets are placed
-		//.pipe(rename('main.min.css'))
+    	.pipe(sass())
+    	//.pipe(sourcemaps.init())
+    	//.pipe(sourcemaps.write())
+    	.pipe(gulp.dest('dist/css'))
+		.pipe(browserSync.reload({
+			stream: true
+		}))
 });
 
 // concatenate & minify js
@@ -40,29 +42,54 @@ gulp.task('scripts', function() {
 		.pipe(gulp.dest('dist/js'))
 		.pipe(rename('main.min.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('dist/js'));
+		.pipe(gulp.dest('dist/js'))
+		.pipe(browserSync.reload({
+			stream: true
+		}))
+});
+//gulp.task('useref', function(){
+//  return gulp.src('src/*.html')
+//    .pipe(useref())
+//    .pipe(gulp.dest('dist'))
+//});
+
+// copy fonts
+gulp.task('fonts', function(){
+	return gulp.src('src/fonts/**/*.{ttf,woff,eof,svg}')
+		.pipe(gulp.dest('dist/fonts'))
 });
 
+// copy images
+gulp.task('images', function() {
+	return gulp.src('src/img/**/*.{png,jpg}')
+		.pipe(gulp.dest('dist/img'))
+});
+
+// copy html
 gulp.task('html', function() {
 	return gulp.src('src/*.html')
-		.pipe(gulp.dest('dist'));
+		.pipe(gulp.dest('dist'))
+		.pipe(browserSync.reload({
+			stream: true
+		}))
 });
 
 // watch for changes
-gulp.task('watch', function() {
-	gulp.watch('src/js/*.js', ['lint', 'scripts']);
-	gulp.watch('src/scss/*.scss', ['sass']);
-	gulp.watch('src/*.html');
+gulp.task('watch', ['browserSync', 'sass'], function() {
+	gulp.watch('src/scss/**/*.scss', ['sass']);
+	gulp.watch('src/js/**/*.js', ['lint', 'scripts']);
+	gulp.watch('src/*.html', ['html']);
 });
 
 // Browser-sync
-gulp.task('browser-sync', function() {
+gulp.task('browserSync', function() {
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "dist"
         }
     });
 });
 
+
 // Default task
-gulp.task('default', ['lint', 'sass', 'scripts', 'browser-sync', 'html', 'watch']);
+gulp.task('default', ['lint', 'sass', 'scripts', 'fonts', 'images', 'html', 'browserSync', 'watch']);

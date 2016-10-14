@@ -1,0 +1,13 @@
+// BS Overrides
+.navbar-brand {
+	height: 60px;
+
+	img {
+		max-width: 130px;
+	}
+}
+.container .jumbotron {
+	margin-top: 76px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}

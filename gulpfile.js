@@ -53,12 +53,6 @@ gulp.task('scripts', function() {
 //    .pipe(gulp.dest('dist'))
 //});
 
-// copy fonts
-gulp.task('fonts', function(){
-	return gulp.src('src/fonts/**/*.{ttf,woff,eof,svg}')
-		.pipe(gulp.dest('dist/fonts'))
-});
-
 // copy images
 gulp.task('images', function() {
 	return gulp.src('src/img/**/*.{png,jpg}')
@@ -92,4 +86,4 @@ gulp.task('browserSync', function() {
 
 
 // Default task
-gulp.task('default', ['lint', 'sass', 'scripts', 'fonts', 'images', 'html', 'browserSync', 'watch']);
+gulp.task('default', ['lint', 'sass', 'scripts', 'images', 'html', 'browserSync', 'watch']);

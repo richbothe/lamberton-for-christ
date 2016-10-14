@@ -1,0 +1,21 @@
+body {
+	font-family: $body-font-stack;
+	font-size: 12px;
+}
+
+.container{
+
+	h1 {
+		font-size: 20px;
+	}
+
+	p {
+		font-size: 14px !important;
+	}
+
+	.jumbotron {
+		margin-top: 76px !important;
+		padding-top: 10px;
+		padding-bottom: 5px;
+	}
+}

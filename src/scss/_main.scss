@@ -1,13 +1,58 @@
 // BS Overrides
 .navbar-brand {
-	height: 60px;
+	/*height: 60px;*/
 
 	img {
-		max-width: 130px;
+		max-width: 160px;
 	}
 }
-.container .jumbotron {
-	margin-top: 76px;
+
+.navbar-default {
+	background-color: $primary-color;
+
+	.navbar-toggle {
+
+		border-color: $accent-gray;
+		margin-top: 13px;
+		margin-bottom: 13px;
+
+		.icon-bar {
+			background-color: $accent-gray;
+		}
+	}
+
+	.navbar-nav li {
+		padding-bottom: 0;
+	}
+
+	.navbar-nav > li > a {
+		color: $secondary-color;
+		font-size: 16px;
+		font-weight: bold;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $accent-gray;
+		}
+	}
+
+	.navbar-nav > .active > a,
+	.navbar-nav > .active > a:hover,
+	.navbar-nav > .active > a:focus {
+		color: #fff;
+		background-color: transparent;
+	}
+}
+
+.well {
+	background-color: $accent-gray;
 	padding-top: 10px;
 	padding-bottom: 5px;
+
+	hr { border-top: 3px solid $hr-color; }
+}
+
+.intro {
+	margin-top: 75px;
+	padding-bottom: 30px;
 }

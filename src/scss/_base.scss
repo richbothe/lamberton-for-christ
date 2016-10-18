@@ -1,21 +1,22 @@
+*, html {
+	margin: 0;
+	padding: 0;
+}
 body {
 	font-family: $body-font-stack;
 	font-size: 12px;
 }
 
-.container{
+h1 { font-size: 20px; }
 
-	h1 {
-		font-size: 20px;
-	}
+p { font-size: 14px !important; }
 
-	p {
-		font-size: 14px !important;
-	}
+ul, ol {
+	margin-left: 12px;
 
-	.jumbotron {
-		margin-top: 76px !important;
-		padding-top: 10px;
-		padding-bottom: 5px;
+	li {
+		padding-bottom: 10px;
 	}
 }
+
+hr { color: $hr-color; }

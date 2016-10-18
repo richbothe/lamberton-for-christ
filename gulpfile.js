@@ -37,7 +37,11 @@ gulp.task('sass', function() {
 
 // concatenate & minify js
 gulp.task('scripts', function() {
-	return gulp.src('src/js/*.js')
+	return gulp.src([
+			'./node_modules/jquery/dist/jquery.js',
+			'./node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+			'src/js/*.js'
+		])
 		.pipe(concat('main.js'))
 		.pipe(gulp.dest('dist/js'))
 		.pipe(rename('main.min.js'))
@@ -52,6 +56,15 @@ gulp.task('scripts', function() {
 //    .pipe(useref())
 //    .pipe(gulp.dest('dist'))
 //});
+
+// copy fonts
+gulp.task('fonts', function(){
+	return gulp.src('./node_modules/font-awesome/fonts/*.{ttf,woff,woff2,eot,svg}')
+		.pipe(gulp.dest('dist/fonts'))
+		.pipe(browserSync.reload({
+			stream: true
+		}))
+});
 
 // copy images
 gulp.task('images', function() {
@@ -86,4 +99,4 @@ gulp.task('browserSync', function() {
 
 
 // Default task
-gulp.task('default', ['lint', 'sass', 'scripts', 'images', 'html', 'browserSync', 'watch']);
+gulp.task('default', ['lint', 'sass', 'scripts', 'fonts', 'images', 'html', 'browserSync', 'watch']);

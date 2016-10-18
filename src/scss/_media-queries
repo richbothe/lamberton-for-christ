@@ -1,0 +1,37 @@
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+	.navbar-default {
+		.navbar-nav > li > a {
+			padding: 25px 30px;
+		}
+	}
+
+	ul.navbar-nav {
+		float: right;
+	}
+
+	.background {
+		background-image: url('../img/building_06.jpg');
+		background-size: cover;
+		min-height: 738px;
+
+		.well {
+			background-color: rgba(245,241,242,0.9);
+			margin-top: 100px;
+		}
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+	/*.background {
+		background-image: url('../img/building_06.jpg');
+		background-size: cover;
+		max-height: 705px;
+	}*/
+}

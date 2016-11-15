@@ -13,7 +13,8 @@ var browserSync = require('browser-sync').create();
 // Delete the dist directory
 gulp.task('clean', function() {
 	return gulp.src('dist')
-		.pipe(clean());
+		.pipe(clean())
+		.pipe(gulp.dest('dist'));
 });
 
 // lint task
@@ -51,6 +52,7 @@ gulp.task('scripts', function() {
 			stream: true
 		}))
 });
+
 //gulp.task('useref', function(){
 //  return gulp.src('src/*.html')
 //    .pipe(useref())
@@ -59,7 +61,10 @@ gulp.task('scripts', function() {
 
 // copy fonts
 gulp.task('fonts', function(){
-	return gulp.src('./node_modules/font-awesome/fonts/*.{ttf,woff,woff2,eot,svg}')
+	return gulp.src([
+		'./node_modules/font-awesome/fonts/*.{ttf,woff,woff2,eot,svg}',
+		'src/fonts/*.{ttf,woff,woff2,eot,svg}'
+		])
 		.pipe(gulp.dest('dist/fonts'))
 		.pipe(browserSync.reload({
 			stream: true

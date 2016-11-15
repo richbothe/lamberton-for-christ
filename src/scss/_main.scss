@@ -1,51 +1,18 @@
 // BS Overrides
-.navbar-brand {
-	/*height: 60px;*/
-
-	img {
-		max-width: 160px;
-	}
+h1, h2, h3 {
+	margin-top: 0;
 }
-
-.navbar-default {
-	background-color: $primary-color;
-
-	.navbar-toggle {
-
-		border-color: $accent-gray;
-		margin-top: 13px;
-		margin-bottom: 13px;
-
-		.icon-bar {
-			background-color: $accent-gray;
-		}
-	}
-
-	.navbar-nav li {
-		padding-bottom: 0;
-	}
-
-	.navbar-nav > li > a {
-		color: $secondary-color;
-		font-size: 16px;
-		font-weight: bold;
-		text-transform: uppercase;
-
-		&:hover {
-			color: $accent-gray;
-		}
-	}
-
-	.navbar-nav > .active > a,
-	.navbar-nav > .active > a:hover,
-	.navbar-nav > .active > a:focus {
-		color: #fff;
-		background-color: transparent;
-	}
+h2 {
+	border-bottom: 2px solid $lavender;
+	padding-bottom: 10px;
+	margin-bottom: 30px;
 }
+h3 { margin-top: 10px; }
+
+img { max-width: 225px; }
 
 .well {
-	background-color: $accent-gray;
+	background-color: $gray;
 	padding-top: 10px;
 	padding-bottom: 5px;
 
@@ -54,5 +21,31 @@
 
 .intro {
 	margin-top: 75px;
-	padding-bottom: 30px;
+
+	.logo {
+		border-bottom: 2px solid $aqua;
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+	}
+}
+
+.container { position: relative; }
+
+.content {
+	padding-top: 50px;
+
+	h5 { color: $violet; }
+
+	img {
+		padding-bottom: 20px;
+		margin: 0;
+	}
+}
+
+.btn.cta {
+	font-size: 22px;
+	width: 100%;
+	margin-bottom: 10px;
+
+	i { margin-right: 10px; }
 }

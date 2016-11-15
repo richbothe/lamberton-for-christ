@@ -7,7 +7,18 @@ body {
 	font-size: 12px;
 }
 
-h1 { font-size: 20px; }
+h1, h2, h3, h4, h5, h6 { font-weight: 700; }
+
+h1 { font-size: 36px; }
+h2 {
+	/*color: #b5b7d4;*/
+	font-family: 'market-deco';
+	font-size: 32px;
+}
+h3 { font-size: 30px; }
+h4 { font-size: 26px; }
+h5 { font-size: 22px; }
+h6 { font-size: 18px; }
 
 p { font-size: 14px !important; }
 
@@ -19,4 +30,50 @@ ul, ol {
 	}
 }
 
-hr { color: $hr-color; }
+hr {
+	border-top: 1px solid $hr-color;
+	/*margin-top: 40px;
+	margin-bottom: 40px;*/
+}
+
+// Buttons
+.btn-primary {
+	background-color: $btn-primary;
+	border-color: $violet;
+	color: $white;
+
+	&:hover {
+		background-color: $aqua;
+		border-color: $aqua;
+	}
+
+	&:active,
+	&:focus {
+		background-color: $btn-primary;
+		border-color: $violet;
+		color: $white;
+	}
+}
+.btn-secondary {
+	background-color: $btn-secondary;
+	border-color: $lavender;
+	color: $white;
+
+	&:hover {
+		background-color: $aqua;
+		border-color: $aqua;
+		color: $white;
+	}
+
+	&:active,
+	&:focus {
+		background-color: $btn-secondary;
+		border-color: $lavender;
+		color: $white;
+	}
+}
+
+//backgrounds
+.bg-gray {
+	background-color: $bg-gray;
+}

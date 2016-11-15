@@ -1,7 +1,22 @@
 $body-font-stack: Helvetica, Arial, sans-serif;
-$primary-color: #966793; //royal purple
-$secondary-color: #cca0b9; //lavender
-$accent-gray: #f5f1f2;
-$accent-light-brown: #b59886;
-$accent-brown: #734a36;
-$hr-color: $secondary-color;
+$primary-color: #462556; //royal purple
+$secondary-color: #c8afd1; //lavender
+$violet: #6a3787;
+$plum: #301d6e;
+$grape: #823051;
+$lavender: #c8afd1;
+$blue: #6f6fac;
+$aqua: #74b999;
+$white: #ffffff;
+$gray: #e7e7e7;
+$black: #000000;
+$blue: #0c3759;
+
+$hr-color: $gray;
+
+// Backgrounds
+$bg-gray: $gray;
+
+// Buttons
+$btn-primary: $violet;
+$btn-secondary: $lavender;

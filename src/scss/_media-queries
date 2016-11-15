@@ -18,9 +18,15 @@
 
 		.well {
 			background-color: rgba(245,241,242,0.9);
-			margin-top: 100px;
+			margin: 30px 0;
+
+			img { max-width: 400px; }
 		}
+
+		.btn.cta { width: auto; }
 	}
+
+	section .container { padding: 30px 15px; }
 }
 
 /* Medium devices (desktops, 992px and up) */

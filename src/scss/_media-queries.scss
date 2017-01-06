@@ -2,10 +2,6 @@
 @media (max-width: 767px) {
 
     .content { padding-top: 70px; }
-    iframe {
-        max-width: 320px;
-        height: auto;
-    }
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -13,8 +9,14 @@
 
 	.navbar-default {
 		.navbar-nav > li > a {
-			padding: 25px;
+            /*min-height: 404px;*/
+			padding: 10px;
 		}
+
+        .navbar-collapse.collapse {
+            display: none!important;
+            min-height: 490px;
+        }
 	}
 
 	ul.navbar-nav {
@@ -46,8 +48,8 @@
     }
 
     .playlist iframe {
-        width: 100%;
-        height: auto;
+        width: 540px;
+        height: 304px;
     }
 }
 
@@ -75,6 +77,7 @@
     }
     .navbar-collapse.collapse {
         display: none!important;
+        min-height: 490px;
     }
     .navbar-nav {
         float: none!important;
@@ -89,6 +92,13 @@
     }
     .collapse.in{
         display:block !important;
+    }
+}
+
+@media (max-width: 425px) {
+    .navbar-collapse.collapse {
+        display: none!important;
+        min-height: 300px;
     }
 }
 

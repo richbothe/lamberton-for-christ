@@ -1,4 +1,4 @@
-var gulp = require('gulp');
+ var gulp = require('gulp');
 
 // Plugins
 var clean = require('gulp-clean');
@@ -75,6 +75,9 @@ gulp.task('fonts', function(){
 gulp.task('images', function() {
 	return gulp.src('src/img/**/*.{png,jpg}')
 		.pipe(gulp.dest('dist/img'))
+		.pipe(browserSync.reload({
+			stream: true
+		}))
 });
 
 // copy html

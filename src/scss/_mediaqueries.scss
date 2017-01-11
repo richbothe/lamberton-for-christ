@@ -1,0 +1,112 @@
+@media (min-width: 320px) {
+	
+	.container { margin-top: 70px; }
+
+	nav .container,
+	.background .container { margin-top: 0; }
+}
+
+@media (max-device-width: 480px) and (orientation: landscape) {
+	
+	.navbar-fixed-top .navbar-collapse {
+    	max-height: 340px;
+    }
+}
+
+@media (min-width: 768px) {
+
+	.navbar-header {
+		width: 100%;
+
+		.navbar-toggle {
+	        display: block;
+	        float: right;
+	    }
+	}
+
+    .navbar-collapse.collapse {
+        display: none!important;
+        min-height: 360px;
+    }
+
+    .collapse.in{
+        display:block !important;
+    }
+
+    .navbar-nav > li {
+        float: none;
+    }
+
+    .navbar-nav > li > a {
+    	padding-top: 10px;
+    	padding-bottom: 10px;
+    }
+
+    .background {
+		background-image: url('../img/building_06.jpg');
+		background-size: cover;
+		min-height: 738px;
+
+		.well {
+			background-color: rgba(245,241,242,0.9);
+			margin: 30px 0;
+
+			img { max-width: 305px; }
+		}
+
+		.btn.landing {
+			width: auto;
+			margin: 20px 0;			
+		}
+	}
+
+	iframe {
+		width: 500px;
+		height: 281px;
+	}
+}
+
+@media (min-width: 1024px) {
+
+	.navbar-default {
+		min-height: 61px;
+
+		.navbar-nav > li > a {
+			font-size: 14px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		.navbar-toggle {
+			display: none;
+		}
+	}
+
+	.navbar-header {
+		float: left;
+		width: auto;
+	}
+
+	.navbar-collapse.collapse {
+        display: block !important;
+        float: right;
+        min-height: 61px;
+    }
+
+    .navbar-nav > li {
+        float: left;
+    }
+
+    .navbar-nav > li > a {
+    	font-size: 14px;
+    	padding-top: 15px;
+    	padding-bottom: 15px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+	.navbar-nav > li > a {
+		font-size: 16px !important;
+	}
+}

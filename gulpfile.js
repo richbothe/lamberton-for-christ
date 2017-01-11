@@ -11,11 +11,11 @@ var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 
 // Delete the dist directory
-gulp.task('clean', function() {
-	return gulp.src('dist')
-		.pipe(clean())
-		.pipe(gulp.dest('dist'));
-});
+//gulp.task('clean', function() {
+//	return gulp.src('dist')
+//		.pipe(clean())
+//		.pipe(gulp.dest('dist'));
+//});
 
 // lint task
 gulp.task('lint', function() {
@@ -41,6 +41,7 @@ gulp.task('scripts', function() {
 	return gulp.src([
 			'./node_modules/jquery/dist/jquery.js',
 			'./node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+			'./node_modules/bootstrap-sass/assets/javascripts/bootstrap/*.js',
 			'src/js/*.js'
 		])
 		.pipe(concat('main.js'))
@@ -75,9 +76,9 @@ gulp.task('fonts', function(){
 gulp.task('images', function() {
 	return gulp.src('src/img/**/*.{png,jpg}')
 		.pipe(gulp.dest('dist/img'))
-		.pipe(browserSync.reload({
-			stream: true
-		}))
+		//.pipe(browserSync.reload({
+		//	stream: true
+		//}))
 });
 
 // copy html
@@ -107,4 +108,4 @@ gulp.task('browserSync', function() {
 
 
 // Default task
-gulp.task('default', ['lint', 'sass', 'scripts', 'fonts', 'images', 'html', 'browserSync', 'watch']);
+gulp.task('default', ['lint', 'sass', 'html', 'scripts', 'fonts', 'images', 'browserSync', 'watch']);

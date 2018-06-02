@@ -81,6 +81,12 @@ gulp.task('images', function() {
 		//}))
 });
 
+// copy audio
+gulp.task('audio', function() {
+    return gulp.src('src/audio/**/*.mp3')
+        .pipe(gulp.dest('dist/audio'))
+});
+
 // copy html
 gulp.task('html', function() {
 	return gulp.src('src/*.html')
@@ -108,4 +114,4 @@ gulp.task('browserSync', function() {
 
 
 // Default task
-gulp.task('default', ['lint', 'sass', 'html', 'scripts', 'fonts', 'images', 'browserSync', 'watch']);
+gulp.task('default', ['lint', 'sass', 'html', 'scripts', 'fonts', 'images', 'audio', 'browserSync', 'watch']);

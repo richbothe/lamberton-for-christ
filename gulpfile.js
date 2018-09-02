@@ -60,12 +60,18 @@ gulp.task('scripts', function() {
 //    .pipe(gulp.dest('dist'))
 //});
 
-// copy fonts
+// vendor fonts to dist
+// gulp.task('vendorFonts', function(){
+// 	return gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/*.{ttf,woff,woff2,eot,svg}')
+// 		.pipe(gulp.dest('src/fonts'))
+// 		.pipe(browserSync.reload({
+// 			stream: true
+// 		}))
+// });
+
+// copy fonts to dist
 gulp.task('fonts', function(){
-	return gulp.src([
-		'./node_modules/font-awesome/fonts/*.{ttf,woff,woff2,eot,svg}',
-		'src/fonts/*.{ttf,woff,woff2,eot,svg}'
-		])
+	return gulp.src('src/fonts/*.{ttf,woff,woff2,eot,svg}')
 		.pipe(gulp.dest('dist/fonts'))
 		.pipe(browserSync.reload({
 			stream: true

@@ -12,8 +12,8 @@
 	background-color: $primary-color;
 
 	.navbar-toggle {
-
 		border-color: $gray;
+		font-size: 10px;
 		margin-top: 13px;
 		margin-bottom: 13px;
 
@@ -24,10 +24,9 @@
 
 	.navbar-toggle.collapsed {
 		color: $gray;
-		font-size: 10px;
 	}
 
-	.navbar-toggle:hover, 
+	.navbar-toggle:hover,
 	.navbar-toggle:focus {
 		background-color: $aqua;
 	}
@@ -57,5 +56,12 @@
 	.navbar-nav > .active > a:focus {
 		color: $white;
 		background-color: transparent;
+	}
+}
+
+// Nav tabs
+.nav-tabs {
+	li {
+		padding-bottom: 0;
 	}
 }

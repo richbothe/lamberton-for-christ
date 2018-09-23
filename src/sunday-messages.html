@@ -59,7 +59,7 @@
 					<div class="well">
 						<h2>Metting Jesus - 3/4/18</h2>
 						<p>John 19: 17-42</p>
-						<audio controls>
+						<audio controls="controls">
 							<source src="audio/03-04-18_message.mp3" type="audio/mpeg">
 							Your browser does not support the audio element.
 						</audio>
@@ -69,7 +69,7 @@
 					<div class="well">
 						<h2>Meeting Jesus - 3/11/18</h2>
 						<p>John 20: 1-18</p>
-						<audio controls>
+						<audio controls="controls">
 							<source src="audio/03-11-18_message.mp3" type="audio/mpeg">
 							Your browser does not support the audio element.
 						</audio>
@@ -79,7 +79,7 @@
 					<div class="well">
 						<h2>Calvary's Cup - 3/18/18</h2>
 						<p>Matthew 26: 22-45</p>
-						<audio controls>
+						<audio controls="controls">
 							<source src="audio/03-18-18_message.mp3" type="audio/mpeg">
 							Your browser does not support the audio element.
 						</audio>
@@ -91,7 +91,7 @@
 					<div class="well">
 						<h2>Meeting Jesus - 4/1/18</h2>
 						<p>John 21: 15-25</p>
-						<audio controls>
+						<audio controls="controls">
 							<source src="audio/04-01-18_message.mp3" type="audio/mpeg">
 							Your browser does not support the audio element.
 						</audio>
@@ -101,7 +101,7 @@
 					<div class="well">
 						<h2>Because You Asked - 4/8/18</h2>
 						<p>James 1: 5-8</p>
-						<audio controls>
+						<audio controls="controls">
 							<source src="audio/04-08-18_message.mp3" type="audio/mpeg">
 							Your browser does not support the audio element.
 						</audio>
@@ -111,7 +111,7 @@
 					<div class="well">
 						<h2>Functioning Faith - 4/22/18</h2>
 						<p>James 1: 1-4</p>
-						<audio controls>
+						<audio controls="controls">
 							<source src="audio/04-22-18_message.mp3" type="audio/mpeg">
 							Your browser does not support the audio element.
 						</audio>
@@ -123,7 +123,7 @@
 					<div class="well">
 						<h2>Functioning Faith - 4/29/18</h2>
 						<p>James 1: 5-8</p>
-						<audio controls>
+						<audio controls="controls">
 							<source src="audio/04-29-18_message.mp3" type="audio/mpeg">
 							Your browser does not support the audio element.
 						</audio>
@@ -131,7 +131,6 @@
 				</div>
 			</div>
 
-			<hr/>
 		</section>
 		<!-- End Devotions -->
 
@@ -155,45 +154,5 @@
 	<script src="js/bootstrap.js"></script> -->
 
 	<script src="js/main.min.js"></script>
-	<script type="text/javascript">
-
-		// Load the iFrame player api code asynchronously
-		var tag = document.createElement('script');
-
-		tag.src = "https://www.youtube.com/iframe_api";
-		var firstScriptTag = document.getElementsByTagName('script')[0];
-		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-		// Create <iframe> and YouTube player after the api code downloads
-		var player;
-		function onYouTuneIframeAPIReady() {
-			player = new YT.Player('player', {
-				height: '390',
-				width: 	'640',
-				videoId: 'M71c1UVf-VE',
-				events: {
-					'onReady': onPlayerReady,
-					'onStateChange': onPlayerStateChange
-				}
-			});
-		}
-
-		// The API will call this function when the video player is ready.
-		function onPlayerReady(event) {
-			event.target.playVideo();
-		}
-
-		// The API calls this function when the player's state changes. The function indicates that when playing a video (state=1), the player should play for six seconds and then stop.
-		var done = false;
-		function onPlayerStateChange(event) {
-			if (event.data == YT.PlayerState.PLAYING && !done) {
-				setTimeout(stopVideo, 6000);
-				done = true;
-			}
-		}
-		function stopVideo() {
-			player.stopVideo();
-		}
-	</script>
 </body>
 </html>

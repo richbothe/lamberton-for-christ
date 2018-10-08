@@ -13,6 +13,9 @@
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link href="css/styles.css" rel="stylesheet">
+	<!-- <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+	<link href="https://cdn.datatables.net/responsive/2.2.2/css/responsive.bootstrap.min.css" rel="stylesheet" />
+	<link href="https://cdn.datatables.net/scroller/1.5.0/css/scroller.bootstrap.min.css" rel="stylesheet" /> -->
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -54,6 +57,53 @@
 		<h1 class="sr-only">Sermons</h1>
 		<section class="messages">
 			<h2>Sunday Messages</h2>
+
+			<table class="messages">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Title</th>
+						<th>Reference</th>
+						<th>Controls</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>3/4/18</td>
+						<td>Meeting Jesus</td>
+						<td>John 19:17-42</td>
+						<td>
+							<audio controls="controls">
+								<source src="audio/03-04-18_message.mp3" type="audio/mpeg">
+								Your browser does not support the audio element.
+							</audio>
+						</td>
+					</tr>
+					<tr>
+						<td>3/11/18</td>
+						<td>Meeting Jesus</td>
+						<td>John 20:1-18</td>
+						<td>
+							<audio controls="controls">
+								<source src="audio/03-11-18_message.mp3" type="audio/mpeg">
+								Your browser does not support the audio element.
+							</audio>
+						</td>
+					</tr>
+					<tr>
+						<td>3/18/18</td>
+						<td>Calvary's Cup</td>
+						<td>Matthew 26:22-45</td>
+						<td>
+							<audio controls="controls">
+								<source src="audio/03-18-18_message.mp3" type="audio/mpeg">
+								Your browser does not support the audio element.
+							</audio>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
 			<div class="row">
 				<div class="col-md-4">
 					<div class="well">
@@ -86,7 +136,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-md-4">
 					<div class="well">
 						<h2>Meeting Jesus - 4/1/18</h2>
@@ -129,7 +179,7 @@
 						</audio>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 		</section>
 		<!-- End Devotions -->
@@ -154,5 +204,11 @@
 	<script src="js/bootstrap.js"></script> -->
 
 	<script src="js/main.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/responsive.bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/scroller/1.5.0/js/dataTables.scroller.min.js"></script>
+
 </body>
 </html>

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     $('nav.navbar').on('click','.navbar-collapse.in',function(e) {
         if( $(e.target).is('a') ) {
             $(this).collapse('hide');
@@ -11,7 +12,10 @@ $(document).ready(function() {
     });
 
     $('#myTabs a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-})
+        e.preventDefault();
+        $(this).tab('show');
+    });
+
+    // dataTables
+    $('table.messages').DataTable();
 });

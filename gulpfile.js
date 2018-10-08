@@ -42,12 +42,16 @@ gulp.task('scripts', function() {
 			'./node_modules/jquery/dist/jquery.js',
 			'./node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
 			'./node_modules/bootstrap-sass/assets/javascripts/bootstrap/*.js',
+            // './node_modules/datatables.net/jquery.dataTables.js',
+            // './node_modules/datatables.net-bs/js/dataTables.bootstrap.js',
+            // './node_modules/datatables.net.responsive-bs/js/responsive.bootstrap.js',
+            // './node_modules/datatables.net-scroller-bd/js/scroller.bootstrap.js',
 			'src/js/*.js'
 		])
 		.pipe(concat('main.js'))
 		.pipe(gulp.dest('dist/js'))
 		.pipe(rename('main.min.js'))
-		.pipe(uglify())
+		//.pipe(uglify())
 		.pipe(gulp.dest('dist/js'))
 		.pipe(browserSync.reload({
 			stream: true

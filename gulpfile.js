@@ -40,12 +40,9 @@ gulp.task('sass', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 			'./node_modules/jquery/dist/jquery.js',
-			'./node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
-			'./node_modules/bootstrap-sass/assets/javascripts/bootstrap/*.js',
-            // './node_modules/datatables.net/jquery.dataTables.js',
-            // './node_modules/datatables.net-bs/js/dataTables.bootstrap.js',
-            // './node_modules/datatables.net.responsive-bs/js/responsive.bootstrap.js',
-            // './node_modules/datatables.net-scroller-bd/js/scroller.bootstrap.js',
+			'./node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+            //'./node_modules/datatables.net/js/jquery.dataTables.min.js',
+            //'./node_modules/datatables.net-bs/js/dataTables.bootstrap.min.js',
 			'src/js/*.js'
 		])
 		.pipe(concat('main.js'))

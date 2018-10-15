@@ -6,16 +6,23 @@ $(document).ready(function() {
         }
     });
 
-    $(".nav a").on("click", function(){
+    // Initialize main nav.
+    $("#mainNav a").on("click", function() {
        $(".nav").find(".active").removeClass("active");
        $(this).parent().addClass("active");
     });
 
-    $('#myTabs a').click(function (e) {
+    // Initialize tabs for Sunday Messages
+    $('#messageTabs a').click(function (e) {
         e.preventDefault();
         $(this).tab('show');
     });
 
     // dataTables
-    $('table.messages').DataTable();
+    // $('table.messages').DataTable({
+    //     responsive: true
+    // });
+
+    // Audio Player
+    $('audio').audioPlayer();
 });

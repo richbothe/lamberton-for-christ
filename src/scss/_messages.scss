@@ -1,10 +1,26 @@
 .messages {
-    .well {
-        background-color: transparent;
-
-        h2 {
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
+    ul.nav-tabs {
+        margin-left: 0;
     }
+
+    .panel-default {
+        border: none;
+    }
+
+    .tab-content .table {
+        margin: 15px 0;
+    }
+
+    // div.tab-pane {
+    //     padding: 15px;
+    // }
+
+    // .well {
+    //     background-color: transparent;
+    //
+    //     h2 {
+    //         font-size: 16px;
+    //         margin-bottom: 15px;
+    //     }
+    // }
 }

@@ -9,6 +9,14 @@
 
     .tab-content .table {
         margin: 15px 0;
+
+        // th:last-child {
+        //     background-color: #ddd;
+        // }
+
+        td {
+            width: 25%;
+        }
     }
 
     // div.tab-pane {

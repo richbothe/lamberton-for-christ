@@ -1,4 +1,8 @@
 .messages {
+
+    .tab-content {
+        padding: 10px 0;
+    }
     ul.nav-tabs {
         margin-left: 0;
     }
@@ -7,28 +11,16 @@
         border: none;
     }
 
-    .tab-content .table {
-        margin: 15px 0;
-
-        // th:last-child {
-        //     background-color: #ddd;
-        // }
-
-        td {
-            width: 25%;
-        }
+    .list-item {
+        padding: 10px;
     }
 
-    // div.tab-pane {
-    //     padding: 15px;
-    // }
+    .list-item:nth-child(odd) {
+        background-color: #f9f9f9;
+    }
 
-    // .well {
-    //     background-color: transparent;
-    //
-    //     h2 {
-    //         font-size: 16px;
-    //         margin-bottom: 15px;
-    //     }
-    // }
+    .list-item h3 {
+        font-size: 20px;
+        margin: 0;
+    }
 }

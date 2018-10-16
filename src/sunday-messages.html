@@ -58,7 +58,7 @@
 			<div>
 			    <ul id="messageTabs" class="nav nav-tabs" role="tablist">
 			        <li role="presentation" class="active">
-			            <a data-toggle="tab" href="#list">Message List</a>
+			            <a data-toggle="tab" href="#list">List</a>
 			        </li>
 			        <li role="presentation" class="">
 			            <a data-toggle="tab" href="#series">Series</a>
@@ -68,30 +68,21 @@
 
 			<div class="tab-content">
 			    <div id="list" class="tab-pane fade in active" role="tabpanel">
-					<!-- <div class="panel panel-default">
-						<h3>Metting Jesus - 3/4/18</h3>
-						<p>John 19: 17-42</p>
-						<audio controls="controls">
-							<source src="audio/03-04-18_message.mp3" type="audio/mpeg">
-							Your browser does not support the audio element.
-						</audio>
-					</div> -->
-					<table class="table table-striped table-bordered messages" style="width:100%;">
+					<!-- <table class="table table-striped" style="width:100%;">
 						<thead>
 							<tr>
-								<th>Title</th>
-								<th>Reference</th>
-								<th>Date</th>
+								<th style="width:25%;">Message Title</th>
+								<th style="width:25%;">Date</th>
+								<th>
+
+								</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>Meeting Jesus</td>
-								<td>John 19:17-42</td>
-								<td>03/04/2018</td>
-							</tr>
-							<tr>
-								<td colspan="3">
+								<td>Meeting Jesus <span class="badge">1 of 3</span></td>
+								<td>3/4/18</td>
+								<td>
 									<audio controls="controls">
 										<source src="audio/03-04-18_message.mp3" type="audio/mpeg">
 										Your browser does not support the audio element.
@@ -99,13 +90,65 @@
 								</td>
 							</tr>
 						</tbody>
-					</table>
+					</table> -->
+					<div class="panel panel-default list-item">
+						<h3>Meeting Jesus</h3>
+						<div class="row">
+							<div class="col-xs-6">
+								<p>3/4/18</p>
+							</div>
+							<div class="col-xs-6">
+								<p class="text-right">Message 1/3</p>
+							</div>
+						</div>
+						<audio controls="controls">
+							<source src="audio/03-04-18_message.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
+					</div>
 			    </div>
 			    <div id="series" class="tab-pane fade" role="tabpanel">
-			        <div>
-			            <h4>Dr. Martin</h4>
-			            <p>PhD in Applied Chemistry</p>
-			        </div>
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								<div class="panel-heading" role="tab" id="headingOne">
+									<h4 class="panel-title">
+										<!-- <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Collapsible Group Item #1</a> -->
+										Meeting Jesus <span class="badge">3</span>
+									</h4>
+								</div>
+							</a>
+							<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+								<div class="panel-body">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingTwo">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Collapsible Group Item #2</a>
+								</h4>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+								<div class="panel-body">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingThree">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Collapsible Group Item #3</a>
+								</h4>
+							</div>
+							<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+								<div class="panel-body">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+								</div>
+							</div>
+						</div>
+					</div>
 			    </div>
 			</div>
 

@@ -96,7 +96,10 @@ gulp.task('audio', function() {
 
 // copy html
 gulp.task('html', function() {
-	return gulp.src('src/*.html')
+	return gulp.src([
+            'src/*.html',
+            'src/*.php'
+        ])
 		.pipe(gulp.dest('dist'))
 		.pipe(browserSync.reload({
 			stream: true

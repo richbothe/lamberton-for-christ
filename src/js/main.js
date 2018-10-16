@@ -18,11 +18,20 @@ $(document).ready(function() {
         $(this).tab('show');
     });
 
-    // dataTables
-    // $('table.messages').DataTable({
-    //     responsive: true
-    // });
-
-    // Audio Player
-    $('audio').audioPlayer();
+    $('#audio2_html5_white').audio2_html5({
+        skin: 'whiteControllers',
+        autoPlay:false,
+        initialVolume:0.5,
+        responsive:true,
+        shuffle:false,
+        playerWidth:570,
+        songTitleColor: '#f9f9f9',
+        //showPlaylistNumber:false,
+        showShuffleBut:false,
+        showFacebookBut:false,
+        showTwitterBut:false,
+        showBuyBut:false,
+        showLyricsBut:false,
+        showAuthor:false
+    });
 });

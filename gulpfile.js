@@ -11,11 +11,11 @@ var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 
 // Delete the dist directory
-//gulp.task('clean', function() {
-//	return gulp.src('dist')
-//		.pipe(clean())
-//		.pipe(gulp.dest('dist'));
-//});
+// gulp.task('clean', function() {
+// 	return gulp.src('dist')
+// 		.pipe(clean())
+// 		.pipe(gulp.dest('dist'));
+// });
 
 // lint task
 gulp.task('lint', function() {
@@ -40,35 +40,24 @@ gulp.task('sass', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 			'./node_modules/jquery/dist/jquery.js',
-			'./node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
-            //'./node_modules/datatables.net/js/jquery.dataTables.min.js',
-            //'./node_modules/datatables.net-bs/js/dataTables.bootstrap.min.js',
-			'src/js/*.js'
+            './node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+            'src/js/jquery-ui.min.js',
+            'src/js/jquery.mousewheel.min.js',
+            'src/js/jquery.touchSwipe.min.js',
+            'src/js/ie10-viewport-bug-workaround.js',
+            'src/js/audio2_html5.js',
+            'src/js/main.js'
+            //'src/js/*.js'
 		])
 		.pipe(concat('main.js'))
 		.pipe(gulp.dest('dist/js'))
 		.pipe(rename('main.min.js'))
-		//.pipe(uglify())
+		.pipe(uglify())
 		.pipe(gulp.dest('dist/js'))
 		.pipe(browserSync.reload({
 			stream: true
 		}))
 });
-
-//gulp.task('useref', function(){
-//  return gulp.src('src/*.html')
-//    .pipe(useref())
-//    .pipe(gulp.dest('dist'))
-//});
-
-// vendor fonts to dist
-// gulp.task('vendorFonts', function(){
-// 	return gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/*.{ttf,woff,woff2,eot,svg}')
-// 		.pipe(gulp.dest('src/fonts'))
-// 		.pipe(browserSync.reload({
-// 			stream: true
-// 		}))
-// });
 
 // copy fonts to dist
 gulp.task('fonts', function(){
@@ -83,9 +72,6 @@ gulp.task('fonts', function(){
 gulp.task('images', function() {
 	return gulp.src('src/img/**/*.{png,jpg}')
 		.pipe(gulp.dest('dist/img'))
-		//.pipe(browserSync.reload({
-		//	stream: true
-		//}))
 });
 
 // copy audio

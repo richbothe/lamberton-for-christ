@@ -24,7 +24,7 @@ $(document).ready(function() {
         initialVolume:0.1,
         responsive:true,
         shuffle:false,
-        playerWidth:570,
+        playerWidth:1170,
         songTitleColor: '#f9f9f9',
         showPlaylistNumber:false,
         showShuffleBut:false,

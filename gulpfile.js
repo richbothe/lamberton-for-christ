@@ -40,11 +40,11 @@ gulp.task('sass', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 			'./node_modules/jquery/dist/jquery.js',
-            './node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
             'src/js/jquery-ui.min.js',
+            './node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+            'src/js/ie10-viewport-bug-workaround.js',
             'src/js/jquery.mousewheel.min.js',
             'src/js/jquery.touchSwipe.min.js',
-            'src/js/ie10-viewport-bug-workaround.js',
             'src/js/audio2_html5.js',
             'src/js/main.js'
             //'src/js/*.js'
